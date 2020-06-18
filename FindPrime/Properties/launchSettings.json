@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FindPrime": {
+      "commandName": "Project",
+      "commandLineArgs": "11"
+    }
+  }
+}
