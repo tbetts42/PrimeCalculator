@@ -1,50 +1,21 @@
-# Search Service API #
+# Prime Calculator #
 
-This API implements [content-api.yml](content-api.yml).
-
-## Client ##
-
-Client code has been generated, and can be found in the content-api-client directory.
+Calculates the Nth prime number.
 
 ## Usage ##
 
-### Request ###
+### FindPrime Console App ##
 
-Send an HTTP POST to `/search` with a `searchQuery` in the body. 
-The searchQuery can be either a single Content ID, or part of a Title.
+Open Powershell or a Command Promt and cd into the FindPrime directory.
 
-For example:
+type `dotnet run n` where `n` is an integer between 1 and 50.
 
-```
-{
-	"searchQuery": "OM984813"
-}
-```
+### Unit Tests ###
 
-or
+Look at [PrimeTests.cs](PrimeCalculator.Tests\PrimeTests.cs) for examples
+of how to check the nth prime number.
 
-```
-{
-	"searchQuery": "bananas"
-}
-```
+## Bonus feature: int.IsPrime() ##
 
-### Response ###
+Check if any integer is prime by using the .IsPrime() extension method.
 
-The response will be an array of `contentResults` similar to the following.
-```
-{
-    "contentResults": [
-        {
-            "title": "Media and Technical Digest March 2020",
-            "contentId": "OM984813",
-            "author": "sitecore\irwinj",
-            "contentType": "Article"
-        }
-    ]
-}
-```
-
-## Primary Developer ##
-
-V1 of this API was created by Thomas Betts <thomas.betts@informa.com>
